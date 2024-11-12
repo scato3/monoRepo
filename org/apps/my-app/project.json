@@ -3,7 +3,24 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/my-app",
   "projectType": "application",
-  "tags": [],
-  "// targets": "to see all targets run: nx show project my-app --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "options": {
+        "outputPath": "dist/apps/my-app"
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "my-app:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "dev": false
+        }
+      }
+    }
+  }
 }

@@ -25,7 +25,12 @@
     "**/*.jsx",
     "../../apps/my-app/.next/types/**/*.ts",
     "../../dist/apps/my-app/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "../../shared/src/**/*.ts",
+    "../../shared/src/**/*.tsx",
+    ".next/types/**/*.ts",
+    "ps/types/**/*.ts",
+    "../../dist/apps/ps/.next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }
