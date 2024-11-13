@@ -2,9 +2,11 @@
   "name": "turbo",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:docs": "turbo run dev --filter=docs",
+    "dev:web": "turbo run dev --filter=web",
+    "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
